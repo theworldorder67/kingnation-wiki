@@ -1,0 +1,660 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wiki KingNation - Guides & Règlements</title>
+    <meta name="description" content="Retrouvez toutes les commandes, règles du serveur et informations officielles sur le projet KingNation.">
+    
+    <!-- Polices Google Fonts : Silkscreen pour l'effet Pixel, Inter pour le corps du texte -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Silkscreen:wght@400;700&display=swap" rel="stylesheet">
+    
+    <!-- Fichier CSS principal -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- 1. EN-TÊTE FIXE (TOP HEADER) -->
+    <header class="top-header">
+        <div class="header-container">
+            <!-- Branding Gauche -->
+            <div class="header-brand">
+                <img src="logo.png" alt="KingNation Logo" class="brand-logo">
+                <div class="brand-text">
+                    <span class="brand-king">KING</span><span class="brand-nation">NATION</span>
+                    <span class="brand-separator">|</span>
+                    <span class="brand-sub">WIKI OFFICIEL</span>
+                    <!-- Étiquette BÊTA Jaune -->
+                    <span class="beta-badge">BÊTA</span>
+                </div>
+            </div>
+
+            <!-- Boutons Actions Droite -->
+            <div class="header-actions">
+                <a href="https://discord.gg/kingnation" target="_blank" class="btn-action btn-action-discord">
+                    <svg class="icon-svg" viewBox="0 0 127.14 96.36" fill="currentColor"><path d="M107.7,8.07A105.15,105.15,0,0,0,77.26,0a77.19,77.19,0,0,0-3.3,6.83A96.67,96.67,0,0,0,53.22,6.83,77.19,77.19,0,0,0,49.88,0,105.15,105.15,0,0,0,19.44,8.07C3.66,31.58-1.86,54.65,1,77.53A105.73,105.73,0,0,0,32,96.36a77.7,77.7,0,0,0,6.63-10.85,68.43,68.43,0,0,1-10.45-5c.87-.64,1.72-1.31,2.53-2a75.46,75.46,0,0,0,72.76,0c.81.69,1.66,1.36,2.53,2a68.43,68.43,0,0,1-10.45,5,77.7,77.7,0,0,0,6.63,10.85,105.73,105.73,0,0,0,31.58-18.83C129,54.65,122.58,31.58,107.7,8.07ZM42.45,65.69C36.18,65.69,31,60,31,53S36.18,40.36,42.45,40.36,53.83,46,53.83,53,48.72,65.69,42.45,65.69Zm42.24,0C78.41,65.69,73.24,60,73.24,53S78.41,40.36,84.69,40.36,96.07,46,96.07,53,91,65.69,84.69,65.69Z"/></svg>
+                    <span>Discord</span>
+                </a>
+                <a href="#telecharger" class="btn-action btn-action-download" data-target="telecharger">
+                    <svg class="icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                    <span>Télécharger</span>
+                </a>
+            </div>
+            
+            <!-- Bouton Menu Mobile Burger -->
+            <button class="mobile-menu-toggle" id="menuToggle" aria-label="Ouvrir le menu">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+            </button>
+        </div>
+    </header>
+
+    <!-- 2. SECTION HÉROS (CENTRAL BRANDING & TABS) -->
+    <section class="hero-section">
+        <div class="hero-container">
+            <!-- Badge de catégorie -->
+            <div class="official-badge">
+                <span class="badge-dot"></span>
+                <span>DOCUMENTATION OFFICIELLE</span>
+            </div>
+
+            <!-- Titres Minecraft/Pixel -->
+            <h1 class="pixel-title-main">Wiki KingNation</h1>
+            <h2 class="pixel-title-sub">Guides & Règlements</h2>
+
+            <!-- Sous-titre descriptif -->
+            <p class="hero-desc">
+                Retrouvez toutes les commandes, règles du serveur et informations officielles sur le projet KingNation — le serveur Minecraft géopolitique développé par ATLAS INTERACTIVE™.
+            </p>
+
+            <!-- 3. TABS DE NAVIGATION HORIZONTAUX -->
+            <nav class="navigation-tabs" id="navigationTabs">
+                <a href="#accueil" class="tab-item active" data-target="accueil">
+                    <span class="tab-hash">#</span> Accueil
+                </a>
+                <a href="#reglement" class="tab-item" data-target="reglement">
+                    <svg class="tab-icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg>
+                    Règlement
+                </a>
+                <a href="#commandes" class="tab-item" data-target="commandes">
+                    <svg class="tab-icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="4 17 10 11 4 5"></polyline><line x1="12" y1="19" x2="20" y2="19"></line></svg>
+                    Commandes In-Game
+                </a>
+                <a href="#economie" class="tab-item" data-target="economie">
+                    <svg class="tab-icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="1" x2="12" y2="23"></line><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg>
+                    Économie & Frontières
+                </a>
+                <a href="#staff" class="tab-item" data-target="staff">
+                    <svg class="tab-icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+                    Staff & Communauté
+                </a>
+            </nav>
+        </div>
+    </section>
+
+    <!-- 4. ZONE DE CONTENU CENTRALISÉE -->
+    <main class="content-container">
+
+        <!-- ================= SECTION ACCUEIL ================= -->
+        <section id="accueil" class="content-section active">
+            <!-- Fil d'ariane (Breadcrumb) -->
+            <div class="breadcrumb-container">
+                <svg class="breadcrumb-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+                <span class="breadcrumb-path">accueil</span>
+                <span class="breadcrumb-separator">—</span>
+                <span class="breadcrumb-desc">Bienvenue sur le projet géopolitique KingNation</span>
+            </div>
+
+            <!-- Bloc Titre Section -->
+            <div class="section-title-card">
+                <div class="section-icon-box">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg>
+                </div>
+                <div class="section-title-text">
+                    <h3 class="pixel-section-title">Accueil du Wiki</h3>
+                    <p>Découvrez l'univers géopolitique et les fonctionnalités majeures de notre serveur.</p>
+                </div>
+            </div>
+
+            <!-- Bannière Hero King Nation -->
+            <div class="hero-banner-box">
+                <img src="banner.png" alt="KingNation Bannière" class="hero-banner-img" onerror="this.style.display='none'; document.getElementById('banner-fallback').style.display='flex';">
+                <div id="banner-fallback" class="banner-fallback-box">
+                    <h2>KING NATION</h2>
+                </div>
+                <div class="banner-gradient-overlay"></div>
+                <div class="banner-content-inner">
+                    <h4>Une aventure unique vous attend</h4>
+                    <p>Rejoignez un serveur Minecraft exclusif doté d'une économie réaliste et de guerres territoriales intenses.</p>
+                </div>
+            </div>
+
+            <div class="grid-content-layout">
+                <!-- Description -->
+                <div class="card card-wide">
+                    <h4 class="card-title">Le Projet KingNation</h4>
+                    <p>KingNation est né de la volonté de proposer un serveur Minecraft moddé compétitif mais accessible. Notre univers fait la part belle à la stratégie, à la diplomatie et au commerce.</p>
+                    <p>Fondez votre nation, recrutez des citoyens, érigez des forteresses et déclarez la guerre à vos rivaux pour étendre votre suprématie. Grâce à nos mods exclusifs, découvrez de nouveaux minerais, des armes uniques et des mécaniques de conquête inédites.</p>
+                    <div class="card-actions">
+                        <button class="btn btn-red" onclick="navigateToSection('reglement')">Lire le Règlement</button>
+                        <p class="server-ip-copy" id="ipCopyBtn">IP: <span id="server-ip">play.kingnation.fr</span></p>
+                    </div>
+                </div>
+
+                <!-- Stats -->
+                <div class="card">
+                    <h4 class="card-title">Informations Serveur</h4>
+                    <ul class="stats-ul">
+                        <li>
+                            <span class="stat-lbl">Version :</span>
+                            <span class="stat-val">1.20.4 (Moddé)</span>
+                        </li>
+                        <li>
+                            <span class="stat-lbl">Type :</span>
+                            <span class="stat-val">Géopolitique / Faction</span>
+                        </li>
+                        <li>
+                            <span class="stat-lbl">Statut :</span>
+                            <span class="stat-val text-green">En Ligne</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= SECTION RÈGLEMENT ================= -->
+        <section id="reglement" class="content-section">
+            <!-- Fil d'ariane (Breadcrumb) -->
+            <div class="breadcrumb-container">
+                <svg class="breadcrumb-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                <span class="breadcrumb-path">reglement</span>
+                <span class="breadcrumb-separator">—</span>
+                <span class="breadcrumb-desc">Règlement officiel Discord & Serveur Minecraft KingNation</span>
+            </div>
+
+            <!-- Bloc Titre Section -->
+            <div class="section-title-card">
+                <div class="section-icon-box">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg>
+                </div>
+                <div class="section-title-text">
+                    <h3 class="pixel-section-title">Règlement Officiel</h3>
+                    <p>Règlement Discord et règlement du serveur KingNation — à lire et respecter obligatoirement.</p>
+                </div>
+            </div>
+
+            <!-- Bloc 1: Discord -->
+            <div class="rules-block-wrapper">
+                <h4 class="sub-block-title"><span class="dot-indicator"></span>Règlement Officiel — Discord KingNation</h4>
+                <p class="block-intro-text">Bienvenue sur le serveur Discord officiel de KING NATION. Ce serveur est destiné à la communauté du projet, aux annonces, aux échanges et au suivi du développement.</p>
+                
+                <div class="grid-content-layout">
+                    <!-- Règle Respect -->
+                    <div class="card">
+                        <h5 class="rule-title">💛 Respect</h5>
+                        <ul class="rule-bullets">
+                            <li>Respect obligatoire envers tous les membres et le staff.</li>
+                            <li>Les insultes, provocations, discriminations et harcèlement sont interdits.</li>
+                            <li>Les conflits inutiles ne seront pas tolérés.</li>
+                        </ul>
+                    </div>
+
+                    <!-- Règle Comportement -->
+                    <div class="card">
+                        <h5 class="rule-title">🤖 Comportement</h5>
+                        <ul class="rule-bullets">
+                            <li>Le spam, flood et troll abusif sont interdits.</li>
+                            <li>Les contenus NSFW, choquants ou illégaux sont interdits.</li>
+                            <li>Les pseudos, avatars ou statuts inappropriés peuvent entraîner une sanction.</li>
+                        </ul>
+                    </div>
+
+                    <!-- Règle Salons -->
+                    <div class="card">
+                        <h5 class="rule-title">💬 Utilisation des Salons</h5>
+                        <ul class="rule-bullets">
+                            <li>Utilisez les salons correctement selon leur thème.</li>
+                            <li>Évitez le hors-sujet excessif.</li>
+                            <li>Respectez les indications données par le staff.</li>
+                        </ul>
+                    </div>
+
+                    <!-- Règle Publicité -->
+                    <div class="card">
+                        <h5 class="rule-title">📢 Publicité</h5>
+                        <ul class="rule-bullets">
+                            <li>Toute publicité non autorisée est interdite.</li>
+                            <li>Le partage de serveurs ou projets personnels doit être validé par un administrateur.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Sanctions Discord -->
+                <div class="warning-alert-box">
+                    <div class="warning-title-wrapper">
+                        <span class="warning-icon">🎂</span>
+                        <h6>Sanctions</h6>
+                    </div>
+                    <p>Le staff se réserve le droit d'appliquer des sanctions selon la gravité des faits : <strong class="text-red">Avertissement, mute, kick ou bannissement définitif.</strong></p>
+                </div>
+            </div>
+
+            <!-- Bloc 2: Serveur Minecraft -->
+            <div class="rules-block-wrapper margin-top-lg">
+                <h4 class="sub-block-title"><span class="dot-indicator dot-purple"></span>Règlement Officiel — Serveur Minecraft KingNation</h4>
+                <p class="block-intro-text">KING NATION est un serveur géopolitique basé sur la stratégie, la diplomatie, l'économie et les conflits entre nations. Chaque joueur doit respecter les règles suivantes afin de garantir une expérience sérieuse et équilibrée.</p>
+
+                <div class="rule-highlight-container">
+                    <h5 class="highlight-title"><span class="dot-highlight"></span>Journal Obligatoire</h5>
+                    <p class="highlight-desc">Toutes les actions importantes doivent obligatoirement être écrites dans le salon journal. Exemples :</p>
+                    <ul class="highlight-bullets">
+                        <li>Déclarations de guerre & Alliances</li>
+                        <li>Traités & Crises diplomatiques</li>
+                        <li>Changements politiques & Événements importants</li>
+                        <li>Revendications territoriales majeures</li>
+                    </ul>
+                </div>
+
+                <div class="grid-content-layout margin-top-md">
+                    <!-- Claims & Pillages -->
+                    <div class="card card-wide">
+                        <h5 class="rule-title">⚔️ Conquêtes, Claims & Guerres</h5>
+                        <ul class="rule-bullets">
+                            <li>Les pillages sont autorisés si la faction ciblée est en sous-pouvoir (Power insuffisant).</li>
+                            <li>Les assauts et déclarations de guerre doivent être justifiés RP et annoncés à l'avance.</li>
+                            <li>Le grief total (lave, eau, destruction inutile de la carte) ou le claim abusif de blocage est interdit.</li>
+                        </ul>
+                    </div>
+
+                    <!-- Anti-jeu -->
+                    <div class="card">
+                        <h5 class="rule-title">🛡️ Fair-play & Triche</h5>
+                        <ul class="rule-bullets">
+                            <li>L'utilisation de cheats, clients modifiés (xray, combat hacks) ou duplications est bannie définitivement.</li>
+                            <li>L'utilisation de double compte pour tricher ou contourner une sanction est proscrite.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= SECTION COMMANDES ================= -->
+        <section id="commandes" class="content-section">
+            <!-- Fil d'ariane (Breadcrumb) -->
+            <div class="breadcrumb-container">
+                <svg class="breadcrumb-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="4 17 10 11 4 5"/><line x1="12" y1="19" x2="20" y2="19"/></svg>
+                <span class="breadcrumb-path">commande-in-game</span>
+                <span class="breadcrumb-separator">—</span>
+                <span class="breadcrumb-desc">Liste des commandes disponibles en jeu sur KingNation</span>
+            </div>
+
+            <!-- Bloc Titre Section -->
+            <div class="section-title-card">
+                <div class="section-icon-box">
+                    <span>👑</span>
+                </div>
+                <div class="section-title-text">
+                    <h3 class="pixel-section-title">Commandes In-Game</h3>
+                    <p>Toutes les commandes disponibles sur le serveur KingNation, classées par rôle</p>
+                </div>
+            </div>
+
+            <!-- 1. Commandes pour tous les Joueurs -->
+            <div class="command-block-card">
+                <div class="command-block-header">
+                    <div class="command-block-title-wrapper">
+                        <span class="block-header-icon">👑</span>
+                        <h5>Commandes pour tous les Joueurs</h5>
+                    </div>
+                    <span class="role-pill-badge pill-tous">TOUS</span>
+                </div>
+                <div class="command-rows-container">
+                    <div class="command-row">
+                        <div class="command-syntax-wrapper">
+                            <code class="cmd-syntax">/kingkit</code>
+                        </div>
+                        <div class="command-desc-wrapper">
+                            <p>Récupère votre kit de départ (<strong>une seule fois par joueur</strong>). Il vous donne les objets configurés par le staff, de l'argent de départ, ainsi que des Poids Politiques pour votre pays si vous en avez un.</p>
+                        </div>
+                    </div>
+                    <div class="command-row">
+                        <div class="command-syntax-wrapper">
+                            <code class="cmd-syntax">/paystop</code>
+                        </div>
+                        <div class="command-desc-wrapper">
+                            <p>Ouvre le <strong>Classement des Pays Riches</strong> pour voir quels sont les pays les plus fortunés du serveur.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 2. Commandes pour les Présidents -->
+            <div class="command-block-card margin-top-lg">
+                <div class="command-block-header">
+                    <div class="command-block-title-wrapper">
+                        <span class="block-header-icon">💼</span>
+                        <h5>Commandes pour les Présidents</h5>
+                    </div>
+                    <span class="role-pill-badge pill-president">PRÉSIDENT</span>
+                </div>
+                <div class="command-rows-container">
+                    <div class="command-row">
+                        <div class="command-syntax-wrapper">
+                            <code class="cmd-syntax">/controlpays</code>
+                        </div>
+                        <div class="command-desc-wrapper">
+                            <p>Accessible uniquement par le <strong>Président</strong> de chaque pays. Ouvre le panneau de contrôle politique et diplomatique de sa nation — permet de changer l'idéologie, la religion, le niveau Defcon, de décréter la loi martiale, de fermer les frontières, d'activer le commerce, le recrutement, etc.</p>
+                        </div>
+                    </div>
+                    <div class="command-row">
+                        <div class="command-syntax-wrapper">
+                            <code class="cmd-syntax">/capitale</code>
+                        </div>
+                        <div class="command-desc-wrapper">
+                            <p>Permet de se téléporter à la <strong>capitale du pays</strong>.</p>
+                        </div>
+                    </div>
+                    <div class="command-row">
+                        <div class="command-syntax-wrapper">
+                            <code class="cmd-syntax">/permpays</code>
+                        </div>
+                        <div class="command-desc-wrapper">
+                            <p>Ouvre l'interface de gestion des permissions de votre pays. Affiche la liste des citoyens (membres en ligne/hors-ligne, leur solde bancaire), le compte en banque national, son Poids Politique, ainsi que les joueurs étrangers ayant des droits. <em>Note : Tout citoyen peut le consulter, mais seul le président peut modifier les droits.</em></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 3. Économie & Commerce -->
+            <div class="command-block-card margin-top-lg">
+                <div class="command-block-header">
+                    <div class="command-block-title-wrapper">
+                        <span class="block-header-icon">💰</span>
+                        <h5>Économie & Commerce</h5>
+                    </div>
+                    <span class="role-pill-badge pill-economie">ÉCONOMIE</span>
+                </div>
+                <div class="command-rows-container">
+                    <div class="command-row">
+                        <div class="command-syntax-wrapper">
+                            <code class="cmd-syntax">/shop</code>
+                        </div>
+                        <div class="command-desc-wrapper">
+                            <p>Ouvre le <strong>menu de la boutique</strong> du serveur pour acheter ou vendre vos ressources.</p>
+                        </div>
+                    </div>
+                    <div class="command-row">
+                        <div class="command-syntax-wrapper">
+                            <code class="cmd-syntax">/banque</code>
+                        </div>
+                        <div class="command-desc-wrapper">
+                            <p>Ouvre votre <strong>compte en banque personnel</strong> pour stocker votre argent en toute sécurité.</p>
+                        </div>
+                    </div>
+                    <div class="command-row">
+                        <div class="command-syntax-wrapper">
+                            <code class="cmd-syntax">/paysbank</code>
+                        </div>
+                        <div class="command-desc-wrapper">
+                            <p>Ouvre la <strong>banque nationale de votre pays</strong>. Idéal pour cotiser en groupe et financer des projets nationaux.</p>
+                        </div>
+                    </div>
+                    <div class="command-row">
+                        <div class="command-syntax-wrapper">
+                            <code class="cmd-syntax">/moneytop</code>
+                        </div>
+                        <div class="command-desc-wrapper">
+                            <p>Ouvre le <strong>Classement des Riches</strong> pour voir quels sont les joueurs les plus fortunés du serveur.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 4. Informations sur les Pays -->
+            <div class="command-block-card margin-top-lg">
+                <div class="command-block-header">
+                    <div class="command-block-title-wrapper">
+                        <span class="block-header-icon">🌐</span>
+                        <h5>Informations sur les Pays</h5>
+                    </div>
+                    <span class="role-pill-badge pill-info">INFO</span>
+                </div>
+                <div class="command-rows-container">
+                    <div class="command-row">
+                        <div class="command-syntax-wrapper">
+                            <code class="cmd-syntax">/infopays</code>
+                        </div>
+                        <div class="command-desc-wrapper">
+                            <p>Ouvre l'interface listant <strong>tous les pays du serveur</strong>. Vous pouvez y voir l'idéologie, la religion d'état, le président et le statut de recrutement de chaque nation.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= SECTION ÉCONOMIE ================= -->
+        <section id="economie" class="content-section">
+            <!-- Fil d'ariane (Breadcrumb) -->
+            <div class="breadcrumb-container">
+                <svg class="breadcrumb-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+                <span class="breadcrumb-path">economie</span>
+                <span class="breadcrumb-separator">—</span>
+                <span class="breadcrumb-desc">Mécaniques financières et frontières géopolitiques</span>
+            </div>
+
+            <!-- Bloc Titre Section -->
+            <div class="section-title-card">
+                <div class="section-icon-box">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+                </div>
+                <div class="section-title-text">
+                    <h3 class="pixel-section-title">Économie & Limites</h3>
+                    <p>Guide sur le fonctionnement des Koins, des métiers et des WorldBorders du serveur.</p>
+                </div>
+            </div>
+
+            <div class="grid-content-layout">
+                <!-- Système Économique -->
+                <div class="card">
+                    <h4 class="card-title">Fonctionnement Économique</h4>
+                    <p>Sur KingNation, la monnaie principale est le **Koin** ($). Les joueurs animent l'économie :</p>
+                    <ul class="rule-bullets">
+                        <li><strong>Les Métiers (Jobs) :</strong> Choisissez vos voies professionnelles (Mineur, Bûcheron...) et recevez des Koins pour vos activités en jeu.</li>
+                        <li><strong>Hôtel des Ventes (/ah) :</strong> Mettez en vente vos surplus de minerais ou équipements et fixez vos prix librement.</li>
+                        <li><strong>Boutique administrative :</strong> Achat de ressources de base et vente d'objets rares récoltés au combat.</li>
+                    </ul>
+                </div>
+
+                <!-- Frontières et claims -->
+                <div class="card">
+                    <h4 class="card-title">Limites de Monde</h4>
+                    <p>Pour stimuler les conflits et limiter la dispersion, les frontières géographiques sont confinées :</p>
+                    <ul class="rule-bullets">
+                        <li><strong>Monde Normal :</strong> Limite de carte fixée à 10 000 blocs de rayon autour du Spawn.</li>
+                        <li><strong>Claims & Faction Power :</strong> Le ratio entre vos claims et le "Power" global de votre faction détermine votre vulnérabilité. Mourir fait chuter le Power de la faction !</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= SECTION STAFF ================= -->
+        <section id="staff" class="content-section">
+            <!-- Fil d'ariane (Breadcrumb) -->
+            <div class="breadcrumb-container">
+                <svg class="breadcrumb-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                <span class="breadcrumb-path">staff</span>
+                <span class="breadcrumb-separator">—</span>
+                <span class="breadcrumb-desc">Membres fondateurs et modérateurs du projet</span>
+            </div>
+
+            <!-- Bloc Titre Section -->
+            <div class="section-title-card">
+                <div class="section-icon-box">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg>
+                </div>
+                <div class="section-title-text">
+                    <h3 class="pixel-section-title">Staff / Communauté</h3>
+                    <p>Découvrez l'équipe administrative de KingNation qui veille au bon déroulement du jeu.</p>
+                </div>
+            </div>
+
+            <div class="staff-cards-grid">
+                <!-- Fondateur -->
+                <div class="staff-profile-card">
+                    <div class="avatar-circle">
+                        <img src="avatar_fondateur.png" alt="Roi_Arthur" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                        <div class="fallback-circle color-red">RA</div>
+                    </div>
+                    <h4 class="profile-name">Roi_Arthur</h4>
+                    <span class="profile-role role-a">Fondateur</span>
+                    <p class="profile-bio">Responsable artistique et gérant général du serveur Minecraft KingNation.</p>
+                </div>
+
+                <!-- Dev -->
+                <div class="staff-profile-card">
+                    <div class="avatar-circle">
+                        <img src="avatar_dev.png" alt="Merlin_Dev" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                        <div class="fallback-circle color-blue">MD</div>
+                    </div>
+                    <h4 class="profile-name">Merlin_Dev</h4>
+                    <span class="profile-role role-d">Développeur</span>
+                    <p class="profile-bio">Créateur des configurations techniques, des plugins et responsable réseau.</p>
+                </div>
+
+                <!-- Modérateur -->
+                <div class="staff-profile-card">
+                    <div class="avatar-circle">
+                        <img src="avatar_mod1.png" alt="Gauvain_Mod" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                        <div class="fallback-circle color-green">GM</div>
+                    </div>
+                    <h4 class="profile-name">Gauvain_Mod</h4>
+                    <span class="profile-role role-m">Modérateur</span>
+                    <p class="profile-bio">Garant de la bonne entente en jeu. Gère les litiges et aide les nouveaux joueurs.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= SECTION TÉLÉCHARGER ================= -->
+        <section id="telecharger" class="content-section">
+            <!-- Fil d'ariane (Breadcrumb) -->
+            <div class="breadcrumb-container">
+                <svg class="breadcrumb-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                <span class="breadcrumb-path">telecharger</span>
+                <span class="breadcrumb-separator">—</span>
+                <span class="breadcrumb-desc">Téléchargement du Launcher Officiel KingNation</span>
+            </div>
+
+            <!-- Bloc principal de Téléchargement -->
+            <div class="download-main-card">
+                <!-- Statut du serveur -->
+                <div class="server-status-badge">
+                    <span class="status-dot"></span>
+                    <span>Vérification de l'état du serveur...</span>
+                </div>
+
+                <!-- Logo brillant -->
+                <div class="download-logo-box">
+                    <img src="logo.png" alt="KingNation Logo" class="download-glowing-logo">
+                </div>
+
+                <!-- Titre principal -->
+                <h3 class="pixel-download-title">Jouez sur <span class="text-red">KingNation</span></h3>
+                <p class="download-subtitle">Téléchargez le launcher officiel et rejoignez notre serveur Minecraft Premium en quelques secondes.</p>
+
+                <!-- Bouton de téléchargement dynamique -->
+                <div class="download-btn-container">
+                    <a href="#" id="launcherDownloadBtn" class="btn-download-launcher disabled">
+                        <svg class="download-btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                        <span>Télécharger pour Windows</span>
+                    </a>
+                </div>
+
+                <!-- Message d'avertissement dynamique de suspension -->
+                <p class="download-suspended-warning" id="downloadSuspendedWarning">
+                    ⚠️ Le téléchargement est temporairement suspendu par le staff.
+                </p>
+
+                <p class="download-premium-note">Compte Premium requis | Des questions ? Rejoignez notre <a href="https://discord.gg/kingnation" target="_blank" class="text-red">Discord</a></p>
+
+                <!-- Encadré SmartScreen -->
+                <div class="smartscreen-box">
+                    <h6>⚠️ Alerte de sécurité Windows (SmartScreen) ?</h6>
+                    <p>Lors du lancement, Windows peut afficher une alerte bleue. Cliquez simplement sur <strong>Informations complémentaires</strong> puis sur <strong>Exécuter quand même</strong>. Notre launcher est 100% sécurisé et cette alerte est uniquement due au fait que l'application est récente.</p>
+                </div>
+            </div>
+
+            <!-- Cartes des Avantages -->
+            <div class="grid-content-layout margin-top-lg">
+                <!-- Mises à Jour -->
+                <div class="card card-feature">
+                    <div class="feature-icon-circle">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21.5 2v6h-6M21.34 15.57a10 10 0 1 1-.57-8.38l5.67-5.67"/></svg>
+                    </div>
+                    <h5>Mises à Jour Automatiques</h5>
+                    <p>Plus besoin de réinstaller le launcher ou de retélécharger les mods. Le launcher vérifie et applique les mises à jour de lui-même à chaque démarrage.</p>
+                </div>
+
+                <!-- Performances -->
+                <div class="card card-feature">
+                    <div class="feature-icon-circle">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+                    </div>
+                    <h5>Performances Fluides</h5>
+                    <p>Le launcher est optimisé pour charger Minecraft rapidement, en allouant précisément la mémoire vive (RAM) recommandée pour votre PC.</p>
+                </div>
+
+                <!-- Connexion Sécurisée -->
+                <div class="card card-feature">
+                    <div class="feature-icon-circle">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+                    </div>
+                    <h5>Connexion Sécurisée</h5>
+                    <p>Connectez-vous de manière sécurisée en un clic via Microsoft OAuth. Vos informations de compte ne transitent jamais par nos serveurs.</p>
+                </div>
+            </div>
+
+            <!-- Titre Comment Rejoindre -->
+            <h4 class="how-to-join-title">Comment Rejoindre ?</h4>
+
+            <!-- Étapes de Connexion -->
+            <div class="join-steps-grid">
+                <!-- Étape 1 -->
+                <div class="join-step-card">
+                    <span class="step-number">01</span>
+                    <h6>Télécharger</h6>
+                    <p>Cliquez sur le bouton de téléchargement ci-dessus pour récupérer l'installateur.</p>
+                </div>
+                <!-- Étape 2 -->
+                <div class="join-step-card">
+                    <span class="step-number">02</span>
+                    <h6>Installer</h6>
+                    <p>Lancez l'installateur sur votre PC et suivez les étapes rapides de configuration.</p>
+                </div>
+                <!-- Étape 3 -->
+                <div class="join-step-card">
+                    <span class="step-number">03</span>
+                    <h6>Se connecter</h6>
+                    <p>Ouvrez le launcher et connectez-vous de manière sécurisée via votre compte Microsoft.</p>
+                </div>
+                <!-- Étape 4 -->
+                <div class="join-step-card">
+                    <span class="step-number">04</span>
+                    <h6>Jouer</h6>
+                    <p>Cliquez sur JOUER. Le launcher configure automatiquement vos mods et se connecte au serveur.</p>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Pied de page -->
+    <footer class="main-footer">
+        <p>© 2026 KingNation. Tous droits réservés. Développé par ATLAS INTERACTIVE™.</p>
+        <div class="footer-ip-tooltip" id="copyTooltip">Cliquer pour copier l'IP !</div>
+    </footer>
+
+    <!-- Script JavaScript Principal -->
+    <script src="app.js"></script>
+</body>
+</html>
